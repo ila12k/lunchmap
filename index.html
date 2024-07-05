@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="lunchmap.css">
+    </head>
+    <script type="text/javascript">
+        setInterval(displayclock,500);
+        function displayclock(){
+            var time =new Date();
+            var hrs=time.getHours();
+            var min=time.getMinutes();
+            var sec=time.getSeconds();
+
+            if(hrs==0){
+                hrs=12;
+            }
+            document.getElementById("clock").innerHTML =hrs+':'+min+':'+sec;
+        }
+    </script>
+    <body>
+        <div class="heading">
+            <h2 id="clock"></h2>
+            <img src="images/header_home.png" class="home" width="150px" height="150px" >
+            <a href="index.html" >12</a>
+            <img src="images/header_menu.png" class="menu" width="150px" height="150px" >
+
+        </div>
+    </body>
+</html>
